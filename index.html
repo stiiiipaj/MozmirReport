@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>关于莫兹米尔上空不明飞行器的六份报告</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #555555;
+            font-family: "SimSun", "Songti SC", serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background-color: #ffffff;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            box-sizing: border-box;
+            position: relative;
+            padding: 20mm 15mm;
+            overflow: hidden;
+        }
+
+        .black-cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            z-index: 10;
+        }
+
+        .red-text-large {
+            color: #ff0000;
+            font-size: 84pt;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            position: absolute;
+            top: 15mm;
+            left: 15mm;
+            z-index: 20;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .partial-black-cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 195mm;
+            background-color: #000000;
+            z-index: 10;
+        }
+
+        .bottom-content {
+            position: absolute;
+            bottom: 20mm;
+            left: 15mm;
+            right: 15mm;
+            z-index: 5;
+            font-family: "SimSun", "Songti SC", serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            color: #000000;
+        }
+
+        .gentext-title {
+            font-style: italic;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .desc-paragraph {
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        .strike-red {
+            text-decoration: line-through;
+            text-decoration-color: #ff0000;
+            text-decoration-thickness: 2px;
+        }
+
+        .black-inline-block {
+            background-color: #000000;
+            color: #ff0000;
+            padding: 0 5px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .red-label-block {
+            background-color: #000000;
+            color: #ff0000;
+            font-family: Arial, sans-serif;
+            font-size: 10.5pt;
+            font-weight: bold;
+            padding: 2px 4px;
+        }
+
+        .black-bar-long {
+            background-color: #000000;
+            height: 18px;
+            margin-top: 4px;
+        }
+
+        .footer-secret {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 40px;
+            letter-spacing: 1px;
+            text-decoration: line-through;
+            text-decoration-color: #ff0000;
+            text-decoration-thickness: 2px;
+        }
+
+        .top-label-7 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .global-plan-title {
+            font-weight: bold;
+            font-size: 14pt;
+            margin-bottom: 15px;
+        }
+
+        .redacted-text-container {
+            background-color: #000000;
+            color: #0d0d0d;
+            padding: 15px;
+            font-size: 11pt;
+            line-height: 1.8;
+            text-align: justify;
+            width: 100%;
+            height: 220mm;
+            box-sizing: border-box;
+        }
+
+        .report-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 9pt;
+        }
+
+        .report-table td {
+            border: 1px solid #000000;
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        .table-header-center {
+            text-align: center;
+            font-weight: bold;
+            font-size: 10pt;
+        }
+
+        .air-intelligence-header {
+            text-align: center;
+            padding: 10px 0 !important;
+        }
+
+        .air-title-en {
+            font-family: Arial, sans-serif;
+            font-size: 18pt;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .air-title-cn {
+            font-size: 18pt;
+            font-weight: bold;
+            letter-spacing: 10px;
+            margin-top: 2px;
+        }
+
+        .cell-label {
+            display: block;
+            font-size: 7.5pt;
+            font-weight: bold;
+            transform: scale(0.9);
+            transform-origin: left top;
+            margin-bottom: 2px;
+        }
+
+        .cell-value {
+            font-size: 11pt;
+            font-family: Arial, sans-serif;
+        }
+
+        .cell-value-cn {
+            font-size: 11pt;
+        }
+
+        .summary-title {
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 10pt;
+        }
+
+        .summary-paragraph {
+            text-indent: 2em;
+            text-align: justify;
+            font-size: 11pt;
+            line-height: 1.6;
+            margin: 12px 0;
+        }
+
+        .page8-footer-border-box {
+            margin-top: 35px;
+            border: 1px solid #000000;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .page8-black-strip-row {
+            background-color: #000000;
+            color: #ff0000;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            padding: 2px 8px;
+            box-sizing: border-box;
+            display: block;
+        }
+
+        .page8-divider-line {
+            height: 1px;
+            background-color: #000000;
+            width: 100%;
+        }
+
+        .audio-control-panel {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            z-index: 100;
+        }
+
+        .audio-btn {
+            width: 140px;
+            height: 35px;
+            background-color: #ffffff;
+            border: 1px solid #555555;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 12px;
+            cursor: pointer;
+            font-family: "SimSun", serif;
+            font-size: 9.5pt;
+            color: #000000;
+            box-sizing: border-box;
+        }
+
+        .audio-btn:hover {
+            background-color: #eeeeee;
+        }
+
+        .triangle-icon {
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-left: 8px solid #000000;
+            border-bottom: 5px solid transparent;
+            margin-right: 10px;
+        }
+
+        .square-icon {
+            width: 8px;
+            height: 8px;
+            background-color: #ff0000;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="audio1" src="audio1.mp3" loop></audio>
+    <audio id="audio2" src="audio2.mp3" loop></audio>
+
+    <div class="audio-control-panel">
+        <div class="audio-btn" onclick="toggleAudio('audio1', this)">
+            <div class="triangle-icon"></div>
+            <span>播放 音频 1</span>
+        </div>
+        <div class="audio-btn" onclick="toggleAudio('audio2', this)">
+            <div class="triangle-icon"></div>
+            <span>播放 音频 2</span>
+        </div>
+    </div>
+
+    <div class="page">
+        <h1 class="red-text-large">1.4 (a)</h1>
+        <div class="black-cover"></div>
+    </div>
+
+    <div class="page">
+        <h1 class="red-text-large">1.4 (a)</h1>
+        <div class="black-cover"></div>
+    </div>
+
+    <div class="page">
+        <h1 class="red-text-large">1.4 (a)</h1>
+        <div class="black-cover"></div>
+    </div>
+
+    <div class="page">
+        <h1 class="red-text-large">1.4 (a)</h1>
+        <div class="black-cover"></div>
+    </div>
+
+    <div class="page">
+        <h1 class="red-text-large">1.4 (a)</h1>
+        <div class="partial-black-cover"></div>
+        
+        <div class="bottom-content">
+            <div class="gentext-title">GENTEXT/UAP</div>
+            <div class="desc-paragraph">
+                • Description: <span class="strike-red">(S//REL)</span> AT 1258Z, <span class="red-label-block">1.4(a)</span> 在坐标 34SDG9041417044 附近观测到疑似不明航空现象。由于观测时间过短，无法对该不明航空现象的高度进行估计。估计其速度为 321 节（约 594 公里 / 小时）。该不明航空现象随后增加了速度，并转向朝东方向飞行。
+            </div>
+            <div>
+                飞行员：<span class="red-label-block">(b)(6)</span>
+                <div class="black-bar-long" style="width: 100%;"></div>
+                <div class="black-bar-long" style="width: 18%; float: left;"></div>
+                <div class="red-label-block" style="float: left; margin-top: 4px;">(b)(6)</div>
+                <div class="black-bar-long" style="width: 60%; float: left; margin-left: 0px;"></div>
+                <div style="clear: both;"></div>
+                <div class="red-label-block" style="margin-top: 25px; margin-left: 90px; float: left;">(b)(6)</div>
+                <div class="black-bar-long" style="width: 50%; float: left; margin-top: 25px;"></div>
+                <div style="clear: both;"></div>
+            </div>
+            <div class="footer-secret">SECRET//REL TO MOZMIR</div>
+        </div>
+    </div>
+
+    <div class="page">
+        <h1 class="red-text-large">1.4 (a)</h1>
+        <div class="black-cover"></div>
+    </div>
+
+    <div class="page">
+        <div class="top-label-7">
+            <span class="red-label-block">(b)(1)1.4a</span>
+        </div>
+        <div class="global-plan-title">• Global Campaign Plan:</div>
+        <div style="margin-bottom: 10px;">
+            <span class="red-label-block">(b)(1)1.4a</span>
+        </div>
+        
+        <div class="redacted-text-container">
+            要是有人问，是否认为下雪具有什么特殊意义，Zenith 可能会回答是的。<br>
+            每次起飞总是会下雪。北极一直下雪，即使是六月份，在常理上不该飘雪的日子也会飘着雪。<br>
+            他完全走进你生命的日子里，阿斯特维克的基地下着雪。你会觉得这并非巧合，而是具有某种意义。<br>
+            当时，你从理性上可能并不相信自己的这个想法，但肯定 * 愿意 * 去相信它。大部分人都乐于相信一再听到那句话：雪是种特别的东西。漫天飞舞的雪花中，没有两片是完全相同的，永远如此。<br>
+            在座舱里，雪快速的撞上玻璃，从两边平行的滑开，你从未打算许下所许的那个诺言，但那天发生了一件事。还记得那天，伽帕辛杰原地转身，从 F-14 的尾部走出来，站到 X-15 还未成型的骨架旁边，你的前面，<br>
+            然后抬起头。月光流淌在那些白沙上。<br>
+            经过了这么多年，你仍记得以下这个画面：<br>
+            he轻柔的说话，年轻的脸上肌肉灵动的牵拉，富有生气的随着话语捏出一个个专业的词汇，手指从左下划到右上，在机库里对你说沉默的话。瞧他在你记忆里的样子，好像在说什么要紧话似的——不管说什么，<br>
+            都将比你此后听到的所有话都要重要。<br>
+            但其实，那只是一些写在 操作手册里该有的话罢了，猛地一看，这些话里没有任何特别之处，<br>
+            事情的开头就只是你和他在机库里闲得没事散步，把海空军的战斗机们一比一的大玩具一样摆弄。<br>
+            在这里就这么多东西，属于你的就这么多东西。<br>
+            总之，那天发生了一件事：<br>
+            你遇到了海军的王牌。<br>
+            X-15 建好了。<br>
+            机库的 LED 灯很冷。
+        </div>
+    </div>
+
+    <div class="page">
+        <table class="report-table">
+            <tr>
+                <td style="width: 35%;">
+                    <span class="cell-label">活动报告国 COUNTRY OR AREA REPORT CONCERNS</span>
+                    <span class="cell-value-cn" style="font-weight: bold; font-size: 10.5pt; padding-left: 15px;">MORZMIR</span>
+                </td>
+                <td style="width: 65%;">
+                    <span class="cell-label">REPORT NO.</span>
+                    <span class="cell-value" style="font-weight: bold; padding-left: 20px;">IR 193-87</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="air-intelligence-header">
+                    <div class="air-title-en">AIR INTELLIGENCE INFORMATION REPORT</div>
+                    <div class="air-title-cn">航空情报信息报告</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="cell-label">报告涉及地区或国家 COUNTRY OR AREA REPORT CONCERNS</span>
+                    <span class="cell-value" style="padding-left: 15px;">ASTRVIK REPUBLIC</span>
+                </td>
+                <td>
+                    <span class="cell-label">信息日期 DATE OF INFORMATION</span>
+                    <span class="cell-value" style="padding-left: 20px;">10 OCT. 87</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="cell-label">提交报告机构 ACTIVITY SUBMITTING REPORT</span>
+                    <span class="cell-value" style="padding-left: 15px;">IPO AIR ATTACHE</span>
+                </td>
+                <td>
+                    <span class="cell-label">收集日期 DATE OF COLLECTION</span>
+                    <span class="cell-value" style="padding-left: 20px;">14 OCT. 87</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="cell-label">报告人 PREPARING INDIVIDUAL</span>
+                    <span class="cell-value" style="padding-left: 15px;">LT. COL. THOMAS S. RYAN</span>
+                </td>
+                <td>
+                    <span class="cell-label">SRI NO.</span>
+                    <span class="cell-value" style="padding-left: 20px;">TIC 6244</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span class="cell-label">评估 EVALUATION</span>
+                    <span class="cell-value" style="font-weight: bold; padding-left: 15px; float: left;">B-2</span>
+                    <span class="cell-value" style="font-size: 8pt; float: right; padding-right: 20px; font-weight: bold; margin-top: 2px;">CANCELED/INCOMPLETE</span>
+                    <div style="clear: both;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span class="cell-label">REFERENCES</span>
+                    <span class="cell-value" style="font-size: 10pt; padding-left: 15px;">BAIR 3A; 2T2; 3A3; 13A13; 3A15. IPAIRA CABLE (TS) C-103 dtd 14 OCT. 87</span>
+                </td>
+            </tr>
+        </table>
+
+        <div style="margin-top: 15px;">
+            <span class="cell-label" style="font-size: 8pt; font-weight: bold;">主题 SUBJECT</span>
+            <div class="cell-value-cn" style="font-size: 13pt; font-weight: bold; padding-left: 30px; margin-top: 5px;">
+                民用航空飞行员在莫兹米尔的观察报告
+            </div>
+        </div>
+
+        <div class="summary-title">摘要 SUMMARY</div>
+        
+        <div class="summary-paragraph">
+            本报告包含对北极莫兹米尔地区一架非常规飞行器升空和飞行的目击者陈述。该飞行器是由三名高度可靠的民用航空飞行员报告的，他们在目击时正驾驶波音737-200进行从莫兹米尔到联盟的航线。这三名飞行员员坚信他们看到的是真正的UFO。
+        </div>
+        
+        <div class="summary-paragraph">
+            两次目击事件发生于1987年10月10日19时10分，地点位于日 <span class="black-inline-block">1.4(a)</span> 与 <span class="black-inline-block">1.4(a)</span> 之间，即飞机刚好处于海穆斯山脉右侧。一架黑色飞行器几乎凭空出现在山脉上方，速度较慢，其外表面向右缓慢滚转，当上升至约二十公里高度时，其速度急剧增加并向高处飞行。大约一分钟后，看到第二架类似形状，但呈白色的飞行器执行了相同的动作。出现区域位于飞行航线以南约10公里处，在那里可以看到两束尾焰几乎延伸数公里。
+        </div>
+
+        <div class="summary-paragraph">
+            这三名访客于1987年10月12日至13日在向 <span class="black-inline-block">(b)(6)</span> IPO空军武官提供的所有其他观察结果，均呈现在第二部分中。
+        </div>
+
+        <div class="page8-footer-border-box">
+            <div class="page8-black-strip-row" style="font-size: 32pt; line-height: 1.1; padding-top: 4px; padding-bottom: 4px;">
+                1.4(a)
+            </div>
+            <div class="page8-divider-line"></div>
+            <div class="page8-black-strip-row" style="font-size: 58pt; line-height: 1.1; padding-top: 8px; padding-bottom: 8px;">
+                1.4(a)
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAudio(audioId, btnEl) {
+            var audio = document.getElementById(audioId);
+            var icon = btnEl.querySelector('div');
+            var text = btnEl.querySelector('span');
+            var displayName = audioId === 'audio1' ? '音频 1' : '音频 2';
+
+            if (audio.paused) {
+                audio.play().then(() => {
+                    icon.className = 'square-icon';
+                    text.innerText = '暂停 ' + displayName;
+                }).catch(err => {
+                    console.log("外部资源加载限制:", err);
+                    alert("提示：请确保目录下存在同名的 " + audio.src.split('/').pop() + " 文件。");
+                });
+            } else {
+                audio.pause();
+                icon.className = 'triangle-icon';
+                text.innerText = '播放 ' + displayName;
+            }
+        }
+    </script>
+</body>
+</html>
